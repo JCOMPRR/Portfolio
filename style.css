@@ -1,0 +1,34 @@
+body {
+  background-color: #1A1C1E;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  font-size: 63px;
+}
+
+/* I */
+.thin-font {
+  font-family: 'Edu QLD Beginner', cursive;
+  color: #dbab83;
+  font-weight: 100!important
+}
+
+/* font-family: 'Edu QLD Beginner', cursive; */
+
+/* AM */
+.thick-font {
+  font-family: 'Edu QLD Beginner', cursive;
+  
+}
+
+/* JOSE */
+.thick-font-name{
+  font-family: 'Edu QLD Beginner', cursive;
+  color: white;
+  font-weight: 700 !important;
+}
+
