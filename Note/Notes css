@@ -1,0 +1,97 @@
+.skip-link {
+    background: white;
+    padding: .5rem 1.5rem;
+    border: 0 0 0.25rem 0.25rem;
+    position: absolute; /* No siempre se pondra esto, en este caso es un ejemplo */
+    left: 0.5rem;
+    transform: translateY(-120%); 
+    transition: transform 325ms ease-in;
+    
+  }
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+html {
+    text-align: center; 
+    font-family: sans-serif;
+    color: #fff;
+    /* Set core builds defaults */
+    scroll-behavior: smooth;
+}
+
+canvas {
+    background: grey;
+    border: 1px dashed;
+}
+
+.paintDownload {
+    display: inline-block;
+    background: #69c;
+    color: #fff;
+    padding: 2px 2px;
+}
+
+body {
+    background-color: #1A1C1E
+
+    /* background-image: url(IMG/Mountain.jpg); */
+
+    /* Este es para que si una imagen es el fondo:
+    background-image: url(IMG/Mountain.jpg);
+    background-repeat: no-repeat; Para que no se repita la imagen
+    background-attachment: fixed; Para que la imagen no se estire y cubra el elemento entero  
+    background-size: cover; Para que cubra todo el elemento*/ 
+}
+
+.padding {
+    border: 2px solid red;
+    padding: 20px;
+    margin: 30px;
+}
+
+.Painting_Link{
+    width: 220px;
+    height: 270px;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /* Parezcan botones los Links */
+
+  /* a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  } */
+

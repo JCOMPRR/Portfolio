@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Contiene informacion de "meta" acerca de la pagina HTML -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!--A skip link is a link placed as early as possible in <body> content that points to the beginning of the page's main content. 
+        Usually, CSS hides a skip link offscreen until focused.
+        Funciona demasiado para acccesibilidad (Investigar mas)-->
+        <a class="skip-link" href="#main-content">
+            Skip Navigation
+        </a>
+
+
+    </header>
+
+    <main id="main-content"> </main> <!-- The skip link jumps to here -->
+
+
+    <!-- Script se usa para todo codigo que sea JavaScript-->
+    <script>
+        var canvas = document.querySelector('canvas'),
+            c = canvas.getContext('2d');
+        c.fillStyle = 'hotpink';
+
+        function draw(x, y) {
+            if (isDrawing) {
+                c.beginPath();
+                c.arc(x, y, 10, 0, Math.PI * 2);
+                c.closePath();
+                c.fill();
+            }
+        }
+
+        canvas.addEventListener('mousemove', event =>
+            draw(event.offsetX, event.offsetY)
+        );
+        canvas.addEventListener('mousedown', () => isDrawing = true);
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+
+        document.querySelector('a').addEventListener('click', event =>
+            event.target.href = canvas.toDataURL()
+        );
+
+    </script>
+
+
+    <p> Parrafo </p> <!-- Parrafos -->
+    <h1 id="A1"> Parrafos y Headings</h1> <!-- Define un parrafo -->
+    <h2> Heading </h2>
+    <h3> Heading </h3> <!-- Asi hasta el h6 -->
+
+    <br>
+    <!-- Este elemento se llama Break, sirve para hacer espacio entre renglones y no tiene contenido.
+        Tampoco contiene un tag final-->
+
+    <!--Aqui inicia algunos tipos de <a> (Links)-->
+    <hr>
+    <h1 id="A2">Links</h1>
+
+    <!-- El tamaño de los links debe ser facil para que se activen y sean vistos, tambien ayuda a personas con dificultad motora
+         y aquellos que usan una touchscreen, el tamaño minimo recomendado es de 44 x 44 CSS pixels (Como se hace esto?)-->
+
+    <!-- Los elementos interactivos, como links, colocados cerca visualmente deben tener espacio separandolos entre si.
+        Separandolos tambien benefician a las personas con dificultad motora que pueden activar el link erroneo.
+        Spacing se puede crear usando las propiedades CSS como Margin -->
+
+    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"> Aqui toda la info de los
+        links </a>
+
+    <p>---------------------</p>
+
+
+    <!-- <a> element links to the section below -->
+    <h2 id="Section_Above_Up">Inicio</h2>
+    <p><a href="#Section_further_down">
+            Dirigite hacia el final de la pagina
+        </a></p>
+
+    <!-- Abre un programa de correo para mandar un correo-->
+    <a href="mailto:rodjosecarlos15@gmail.com"> Email me</a>
+
+    <!-- Link para llamadas -->
+    <p> Contact me</p>
+    <a href="tel:+49.157.0156">+49 157 0156</a>
+    <br>
+    <a href="tel:+1(555)5309">(555) 5309</a>
+
+    <!-- Para pintar (se creo un Js y CSS) (Investigar como funcionan los CANVAS)-->
+    <p>Paint by holding down the mouse button and moving it.
+    <div class="paintDownload">
+        <a href="" download="my_painting.png">Download my painting</a>
+    </div>
+    </p>
+
+    <canvas width="300" height="300"></canvas>
+
+    <!--Un error muy comun y triste es que solo se linkeen las palabras "Here" or "Click here" como en este ejemplo.
+    Se le llama Link innaccesible o Weak Link Text-->
+    <p>
+        Learn more about our products <a href="/products">here</a>.
+    </p>
+
+    <!--Este es mejor y mas corto, se le llama Strong Link Text-->
+    <p>
+        Learn more <a href="/products">about our products</a>.
+    </p>
+
+    <p>Onclick events <br>
+        Anchor elements are often abused as fake buttons by setting their href to # or javascript:void(0) to prevent the
+        page from refreshing, then listening for their click events.
+        <br>
+        These bogus href values cause unexpected behavior when copying/dragging links, opening links in a new
+        tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. <br> They also convey incorrect
+        semantics to assistive technologies, like screen readers.
+        <br>
+        Use a <button>Button</button> instead. In general, you should only use a hyperlink for navigation to a real URL.
+    </p>
+
+    <!--Link that opens a new tab/window-->
+    <a target="_blank" href="https://www.wikipedia.org">
+        Wikipedia (opens in new tab)
+    </a>
+    <br>
+
+    <!--Link to a non-HTML resource-->
+    <a href="2017-annual-report.ppt">
+        2017 Annual Report (PowerPoint)
+    </a>
+    <br>
+    <!--If an icon is used to signify link behavior, make sure it has "alt text"
+    Aqui tecnicamente se le agrega una imagen y texto en la imagen informacndo que se abrira una ventana nueva link de ejemplo
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#external_links_and_linking_to_non-html_resources-->
+
+    <a target="_blank" href="https://www.wikipedia.org">
+        Wikipedia
+        <img alt="(opens in new tab)" src="newtab.svg">
+    </a>
+    <br>
+    <a href="2017-annual-report.ppt">
+        2017 Annual Report
+        <img alt="(PowerPoint file)" src="ppt-icon.svg">
+    </a>
+
+    <hr> <!-- Se usa para separar contenido de un HTML en una linea Horizontal -->
+
+
+    <h1>Imagenes</h1>
+    <!-- El alt es para cuando no carga una imagen salga ese texto y tiene que describir la imagen-->
+    <p> La imagen se ajusta con width y height (Ancho y Largo) no se si haya mas</p>
+    <img src="IMG/HTML Structure" alt="Structure" width="300" height="200">
+
+    <!-- HTML Images Syntax
+The HTML <img> tag is used to embed an image in a web page.
+
+Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.
+
+The <img> tag is empty, it contains attributes only, and does not have a closing tag.
+
+The <img> tag has two required attributes:
+
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image -->
+
+<!-- --------------------- -->
+<!--
+    Images on Another Server/Website
+Some web sites point to an image on another server.
+
+To point to an image on another server, you must specify an absolute (full) URL in the src attribute: -->
+<!-- <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"> -->
+
+    <hr>
+
+    <h2>GIFS</h2>
+    <a href="https://www.gifsanimados.org/cat-computadora-y-ordenador-56.htm"><img src="https://www.gifsanimados.org/data/media/56/computadora-y-ordenador-imagen-animada-0019.gif" border="0" alt="computadora-y-ordenador-imagen-animada-0019" /></a>
+
+    <hr>
+
+    <h2>Floating Images</h2>
+    <p><strong>Float the image to the right:</strong></p>
+
+    <p>
+    <img src="IMG/Smiley_Face.png" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+    </p>
+
+    <p><strong>Float the image to the left:</strong></p>
+    <p>
+    <img src="IMG/Smiley_Face.png" alt="Smiley face" style="float:left;width:42px;height:42px;">
+    A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+    </p>
+
+    <hr>
+
+    <h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+<!-- https://www.w3schools.com/html/html_images_imagemap.asp 
+    Investigar mejor como sacar las coordenadas, dudo que se usse en mundo real, pero es mejor conocer este metodo-->
+
+    <img src="IMG/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+    <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.liverpool.com.mx/tienda/hp-11-b009-laptop-2-en-1-negro/1053316456?s=laptop&skuId=1053316456">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.apple.com/mx/iphone/?afid=p238%7CsJLIcyvtH-dc_mtid_209252us43576_pcrid_607360676828_pgrid_127700799272_&cid=wwa-mx-kwgo-iphone-slid--Brand-iPhone-Evergreen-">
+    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://cafechac.com/?gclid=Cj0KCQjw8amWBhCYARIsADqZJoU-i306I6kx-Yal3GZkFW8ToEvJPM6ru6GaTCObWQAFJi7s8bEl78QaAqdxEALw_wcB">
+    </map>
+
+    <hr>
+    <h2>Background Image</h2>
+
+    <p class="backgroundimage">You can specify background images<br>
+    for any visible HTML element.<br>
+    In this example, the background image<br>
+    is specified for a div element.<br>
+    By default, the background-image<br>
+    will repeat itself in the direction(s)<br>
+    where it is smaller than the element<br>
+    where it is specified. (Try resizing the<br>
+    browser window to see how the<br>
+    background image behaves.</p>
+
+    <!-- La opcion para hacer una imagen de fondo esta en el style en body -->
+    <hr>
+
+    <h2>Background repeat</h2>
+    <p>If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element 
+        <br> 
+    To avoid the background image from repeating itself, set the background-repeat property to no-repeat.</p>
+        <p>
+            background-image: url('example_img_girl.jpg');
+            <br>
+            background-repeat: no-repeat;
+        </p>
+
+    <hr>
+
+    <h2> The HTML "picture" Element </h2>
+        <pre>
+            The HTML < picture > element gives web developers more flexibility in specifying image resources.
+            
+            The < picture > element contains one or more < source > elements, each referring to different images through the "srcset" attribute. This way the browser can choose the image that best fits the current view and/or device.
+            
+            Each < source > element has a media attribute that defines when the image is the most suitable.
+        </pre>
+
+
+    <hr>
+
+    <h1>Formatting</h1>
+    <pre>
+        Dependiendo como escriba el "pre" agarrara esa forma, su fuente predeterminada sera Courier, preserva los espacios y los breaks de las lineas
+    </pre>
+
+    <b>Bold text</b> <br>
+    <strong>Important text</strong> <br>
+    <i>Italic text</i> <br>
+    <!--The <i> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc. -->
+    <em>Emphasized text</em> <br>
+    <!-- A screen reader will pronounce the words in <em> with an emphasis, using verbal stress. -->
+    <mark>Marked text</mark> <br>
+    <small>Small text</small> <br>
+    <del>Deleted text</del> <br> >Inserted text</ins> <br>
+    <p>H<sub>2</sub>O</p>
+    <!--Subscript text can be used for chemical formulas, like H2O -->
+    <p>X<sup>2</sup></p> <br>
+    <!--Superscript text can be used for footnotes, like WWW[1] -->
+
+    <hr>
+    <!-- El único atributo específico que contiene blockquote es cite, con el que indicas una cita de otra url. Investigar mas a fondo -->
+    <h1 id="A3">Quotations</h1>
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization,
+        WWF works in 100 countries and is supported by
+        1.2 million members in the United States and
+        close to 5 million globally.
+    </blockquote>
+
+    <!-- <q> pone comillas para una cita -->
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+    <p>Marking up abbreviations can give useful information to browsers, translation systems and search-engines.</p>
+
+    <p>The HTML address element defines contact information (author/owner) of a document or article.</p>
+
+    <address>
+        Written by John Doe.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+
+    <p>---------------------</p>
+
+    <p>The HTML cite element defines the title of a work.</p>
+    <p>Browsers usually display cite elements in italic.</p>
+
+    <img src="IMG/img_the_scream.jpg" width="220" height="277" alt="The Scream">
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <p>---------------------</p>
+
+
+    <p>If your browser supports bi-directional override (bdo), the next line will be written from right to left (rtl):
+    </p>
+
+    <bdo dir="rtl">This line will be written from right to left</bdo>
+
+    <hr>
+
+    <h1>HTML Colors</h1>
+    <!-- El style se hace en un nuevo archivo .css, pero en este ejemplo se dejara asi -->
+
+    <!-- You can set the background color for HTML elements:-->
+    <h1 style="background-color:DodgerBlue;">Hello World</h1>
+    <p style="background-color:Tomato;">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.
+        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+        commodo consequat.
+    </p>
+
+    <!-- You can set the color of text:-->
+    <h3 style="color:Tomato;">Hello World</h3>
+
+    <p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+        tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+    <p style="color:MediumSeaGreen;">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+        lobortis nisl ut aliquip ex ea commodo consequat.</p>
+
+    <!-- You can set the color of borders: -->
+    <h1 style="border: 2px solid Tomato;">Hello World</h1>
+
+    <h1 style="border: 2px solid DodgerBlue;">Hello World</h1>
+
+    <h1 style="border: 2px solid Violet;">Hello World</h1>
+
+    <p>---------------------</p>
+
+    <h2>Html RGB and RGBA Colors</h2>
+
+    <pre>
+In HTML, a color can be specified as an RGB value, using this formula: rgb(red, green, blue)
+
+Each parameter (red, green, and blue) defines the intensity of the color with a value between 0 and 255.
+
+This means that there are 256 x 256 x 256 = 16777216 possible colors!
+
+For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255), and the other two (green and blue) are set to 0.
+
+Another example, rgb(0, 255, 0) is displayed as green, because green is set to its highest value (255), and the other two (red and blue) are set to 0.
+
+To display black, set all color parameters to 0, like this: rgb(0, 0, 0).
+
+To display white, set all color parameters to 255, like this: rgb(255, 255, 255).
+    </pre>
+
+    <h1 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h1>
+    <h1 style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h1>
+    <h1 style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</h1>
+    <h1 style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</h1>
+    <h1 style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</h1>
+    <h1 style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</h1>
+
+    <br>
+    <h2>Shades of gray</h2>
+    <p>Shades of gray are often defined using equal values for all three parameters:</p>
+    <h1 style="background-color:rgb(60, 60, 60);">rgb(60, 60, 60)</h1>
+    <h1 style="background-color:rgb(100, 100, 100);">rgb(100, 100, 100)</h1>
+    <h1 style="background-color:rgb(140, 140, 140);">rgb(140, 140, 140)</h1>
+    <h1 style="background-color:rgb(180, 180, 180);">rgb(180, 180, 180)</h1>
+    <h1 style="background-color:rgb(200, 200, 200);">rgb(200, 200, 200)</h1>
+    <h1 style="background-color:rgb(240, 240, 240);">rgb(240, 240, 240)</h1>
+
+    <br>
+    <h2>RGBA Color Values</h2>
+
+    <pre>
+RGBA color values are an extension of RGB color values with an Alpha channel - which specifies the opacity for a color.
+
+An RGBA color value is specified with: 
+
+rgba(red, green, blue, alpha)
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+    </pre>
+
+    <h1 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h1>
+
+    <p>---------------------</p>
+
+    <h2>HEX Colors</h2>
+
+    <pre>
+In HTML, a color can be specified using a hexadecimal value in the form:
+
+#rrggbb
+
+Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+
+For example, #ff0000 is displayed as red, because red is set to its highest value (ff), and the other two (green and blue) are set to 00.
+
+Another example, #00ff00 is displayed as green, because green is set to its highest value (ff), and the other two (red and blue) are set to 00.
+
+To display black, set all color parameters to 00, like this: #000000.
+
+To display white, set all color parameters to ff, like this: #ffffff.
+    </pre>
+
+    <h1 style="background-color:#ff0000;">#ff0000</h1>
+    <h1 style="background-color:#0000ff;">#0000ff</h1>
+    <h1 style="background-color:#3cb371;">#3cb371</h1>
+    <h1 style="background-color:#ee82ee;">#ee82ee</h1>
+    <h1 style="background-color:#ffa500;">#ffa500</h1>
+    <h1 style="background-color:#6a5acd;">#6a5acd</h1>
+
+    <br>
+    <h2> Shades of gray</h2>
+    <p>Shades of gray are often defined using equal values for all three parameters:</p>
+    <h1 style="background-color:#404040;">#404040</h1>
+    <h1 style="background-color:#686868;">#686868</h1>
+    <h1 style="background-color:#a0a0a0;">#a0a0a0</h1>
+    <h1 style="background-color:#bebebe;">#bebebe</h1>
+    <h1 style="background-color:#dcdcdc;">#dcdcdc</h1>
+    <h1 style="background-color:#f8f8f8;">#f8f8f8</h1>
+
+    <hr>
+    <h1>HTML HSL and HSLA Colors</h1>
+    <p>
+        HSL stands for hue, saturation, and lightness.
+        <br>
+        HSLA color values are an extension of HSL with an Alpha channel (opacity).
+    </p>
+
+    <h2>HSL Color Values</h2>
+
+    <pre>
+In HTML, a color can be specified using hue, saturation, and lightness (HSL) in the form:
+
+hsl(hue, saturation, lightness)
+
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+
+Lightness is also a percentage value, 0% is black, and 100% is white.
+
+Experiment by mixing the HSL values below:
+    </pre>
+
+    <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+    <h1 style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</h1>
+    <h1 style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</h1>
+    <h1 style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</h1>
+    <h1 style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</h1>
+    <h1 style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</h1>
+
+    <h2>Saturation</h2>
+
+    <pre>
+Saturation can be described as the intensity of a color.
+
+100% is pure color, no shades of gray
+
+50% is 50% gray, but you can still see the color.
+
+0% is completely gray, you can no longer see the color.
+    </pre>
+
+    <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 80%, 50%);">hsl(0, 80%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 60%, 50%);">hsl(0, 60%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 40%, 50%);">hsl(0, 40%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 20%, 50%);">hsl(0, 20%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 50%);">hsl(0, 0%, 50%)</h1>
+
+    <p>With HSL colors, less saturation mean less color. 0% is completely gray.</p>
+
+
+    <h2>Lightness</h2>
+
+    <pre>
+        The lightness of a color can be described as how much light you want to give the color, where 0% means no light (black), 
+        50% means 50% light (neither dark nor light) 100% means full lightness (white).
+    </pre>
+
+    <h1 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h1>
+    <h1 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h1>
+    <h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+    <h1 style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</h1>
+    <h1 style="background-color:hsl(0, 100%, 90%);">hsl(0, 100%, 90%)</h1>
+    <h1 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h1>
+
+    <p>With HSL colors, 0% lightness means black, and 100 lightness means white.</p>
+
+    <h2>Shades of gray</h2>
+
+    <pre>
+        Shades of gray are often defined by setting the hue and saturation to 0, and adjust the lightness from 0% to 100% to get darker/lighter shades:
+    </pre>
+
+    <h1 style="background-color:hsl(0, 0%, 20%);">hsl(0, 0%, 20%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 30%);">hsl(0, 0%, 30%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 40%);">hsl(0, 0%, 40%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 60%);">hsl(0, 0%, 60%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 70%);">hsl(0, 0%, 70%)</h1>
+    <h1 style="background-color:hsl(0, 0%, 90%);">hsl(0, 0%, 90%)</h1>
+
+    <h2>HSLA Color Values</h2>
+
+    <pre>
+HSLA color values are an extension of HSL color values with an Alpha channel - which specifies the opacity for a color.
+
+An HSLA color value is specified with:
+
+hsla(hue, saturation, lightness, alpha)
+
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+
+    </pre>
+
+    <h1 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h1>
+
+    <hr>
+    <h1 id="A4">CSS Border, Padding y Margin</h1>
+
+    <p>Al dar click derecho y en "Inspeccionar elemento" seleccionamos Ctrl + Shift + C y pasamos el cursor por el
+        ejemplo de abajo nos mostrara el margin, padding y border</p>
+
+    <img src="IMG/Example-Border-Padding-Margin" alt="">
+    <p class="padding"> El "padding" es el espacio que hay entre el borde y el texto. El "margin" define el space fuera
+        del borde </p>
+
+    <hr>
+
+    <h1>Hyperlink</h1>
+    <p>En este link se abrira en la misma ventana</p>
+    <a href="https://www.w3schools.com/"> Pagina de estudio</a>
+    <br> <br>
+    <p>Cuando tenga target="_blank" se abrira una ventana nueva</p>
+    <a href="https://www.w3schools.com/" target="_blank">Pagina de estudio</a>
+
+    <hr>
+
+    <h1>Absolute URLs vs. Relative URLs</h1>
+    <pre>
+
+Both examples above are using an absolute URL (a full web address) in the href attribute.
+
+A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+    </pre>
+
+    <h2>Absolute URLs</h2>
+    <p><a href="https://www.w3.org/" target="_blank">W3C</a></p>
+    <p><a href="https://www.google.com/" target="_blank">Google</a></p>
+
+    <h2>Relative URLs</h2>
+    <p>Usare estos links cuando tenga mas secciones en la pagina</p>
+    <p><a href="html_images.asp">HTML Images</a></p>
+    <p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+    <hr>
+
+    <h1>IMG Links</h1>
+
+    <a href="https://en.wikipedia.org/wiki/The_Scream" target="_blank">
+        <img class="Painting_Link" src="IMG/img_the_scream.jpg" alt="The Scream">
+    </a>
+
+    <hr>
+
+    <h2>Button as a Link</h2>
+    <p> To use an HTML button as a link, you have to add some JavaScript code. JavaScript allows you to specify what
+        happens at certain events, such as a click of a button:</p>
+    <button onclick="document.location='default.asp'">Ejemplo</button>
+    <!-- Buscar como se usa esto con JS -->
+
+    <hr>
+
+    <h2>Link Titles</h2>
+    <p>The title attribute specifies extra information about an element. The information is most often shown as a
+        tooltip text when the mouse moves over the element.</p>
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+    <!-- Un titulo aparece cuando mantienes el cursor sobre el link -->
+
+    <hr>
+
+    <h2>External Paths</h2>
+
+    <p>This example links to a page located in the html folder on the current web site:</p>
+
+    <p><a href="/index.html/">HTML tutorial</a></p>
+
+    <h2>External Paths</h2>
+
+    <p>This example links to a page located in the same folder as the current page:</p>
+
+    <p><a href="default.asp">HTML tutorial</a></p>
+
+    <hr>
+
+    <h2>BookMarks</h2>
+
+    <pre>
+        Bookmarks can be useful if a web page is very long.
+
+        To create a bookmark - first create the bookmark, then add a link to it.
+        
+        When the link is clicked, the page will scroll down or up to the location with the bookmark.
+    </pre>
+
+    <p><a href="#A1">Parrafo y heading</a></p>
+    <p><a href="#A2">Links</a></p>
+    <p><a href="#A3">Quotations</a></p>
+    <p><a href="#A4">CSS Border, Padding & Margin</a></p>
+
+    <!-- You can also add a link to a bookmark on another page:
+    <a href="html_demo.html#C4">Jump to Chapter 4</a> -->
+
+    
+
+    <hr>
+    <!-- Heading to link to -->
+    <h2 id="Section_further_down">Seccion Final</h2>
+    <p><a href="#Section_Above_Up">
+            Regresar al inicio
+        </a></p>
+
+</body>
+
+</html>
