@@ -1,6 +1,48 @@
 /* Probar si se puede agregar varios fondos de colores */
 body{
-  background-color: rgb(95, 99, 104);
+  background-color: #121212;
   /* background-color: rgb(32, 33, 36); */
 
+}
+
+p{
+  color: white;
+  
+}
+
+a{
+  color: white;
+}
+
+h1{
+  color: white;
+}
+
+h3{
+  color: white;
+}
+
+li{
+  color: white;
+}
+
+table{
+  color: white;
+}
+
+hr{
+  border-color: white;
+  border-style: dotted none none;
+  border-width: 8px;
+  height: 2px;
+  width: 8%;
+}
+
+/* .profile-picture{
+} */
+
+/* Contact-Me */
+
+label{
+  color: white;
 }
