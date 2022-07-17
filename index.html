@@ -6,91 +6,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jose's Portfolio</title>
-  <link rel="stylesheet" href="CSS/style.css"/>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="icon" href="images/favicon.ico">
 </head>
 
 <body>
-  <a href="hobbies.html">My Hobbies</a>
-  <a href="contact-me.html">Contact Me</a>
-  <table cellspacing="20px">
-    <tr>
-      <td>
-        <img class="profile-picture" src="images/pfp.jpg" alt="Jose's profile picture" height="200rem" width="200rem" />
-      </td>
-      <td>
-        <h1>Jose Carlos</h1>
-        <p>I'm a <em> FrontEnd Web Developer</em></p>
-        <p>None yet</p>
-      </td>
-    </tr>
-  </table>
-  <hr />
-  <h3>Technologies</h3>
-  <ul>
-    <li>React</li>
-    <li>Git</li>
-  </ul>
-  <h3>Work Experience</h3>
-  <!-- La estructura que se vera mas es la thead y tbody, casi no se vera el tfoot 
-      https://developer.mozilla.org/es/docs/Learn/HTML/Tables/Advanced -->
-  <table cellspacing="10px">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Schools</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2011-2013</td>
-        <td>Liceo Tecnologico de Sonora</td>
-      </tr>
-      <tr>
-        <td>2013-2016</td>
-        <td>Colegio Alerce</td>
-      </tr>
-      <tr>
-        <td>2016-2017</td>
-        <td>Universidad del valle de Mexico</td>
-      </tr>
-      <tr>
-        <td>2017-2020</td>
-        <td>Cecytes</td>
-      </tr>
-      <tr>
-        <td>2021</td>
-        <td>Unikino</td>
-      </tr>
-    </tbody>
-    <!-- <tfoot></tfoot>-->
-  </table>
+  <div class="header-links">
+    <div class="header-hobbies">
+      <a href="hobbies.html">About</a>
+    </div>
+    <div class="contact" >
+      <a href="contact-me.html">Contact</a>
+    </div>
+  </div>
 
-  <hr />
+  <div class="top-container">
+    
+    <h1 class="header-name">Im Jose Carlos</h1>
+    <p class="header-profession">FrontEnd Web Developer</p>
+  </div>
 
-  <h3>Skills</h3>
-  <table cellspacing="10px">
-    <tr>
-      <td>
-        <table>
-          <tr>
-            <td>JavaScript</td>
-            <td>⭐</td>
-          </tr>
-          <tr>
-            <td>React.Js</td>
-            <td>None</td>
-          </tr>
-          <tr>
-            <td>Bootstrap</td>
-            <td>⭐⭐</td>
-          </tr>
-        </table>
-      </td>
-      <td></td>
-    </tr>
-  </table>
-  <hr />
-  
+  <div class="middle-container">
+    <h2>Programming Skills</h2>
+    <img src="images/JS.png" alt="JavaScript-Logo">
+    <img src="images/BootStrap.png" alt="BootStrap-Logo">
+    <img src="images/React.png" alt="React">
+    <img src="images/Node.PNG" alt="Node">
+    <img src="images/Git.png" alt="">
+  </div>
+
+
 </body>
 
 </html>

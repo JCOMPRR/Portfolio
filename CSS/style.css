@@ -1,49 +1,66 @@
-/* Probar si se puede agregar varios fondos de colores */
+/* El margin: 0; elimina el margin de arriba, derecha e izquierda sin escribir margin-top, margin-right y -margin-left */
 body{
   background-color: #121212;
-  /* background-color: rgb(32, 33, 36); */
+  margin: 0; 
+}
 
+.header-links{
+  text-align: right;
+  width: 320px;
+}
+
+.header-hobbies{
+  width: 200px;
+  position: relative;
+  display: block;
+}
+
+.header-contact{
+  width: 200px;
+  position: relative;
+  display: block;
+
+}
+
+.top-container{
+  background-color: #1f282d;
+  color: white;
+  text-align: center;
+  padding: 120px;
+  padding-bottom: 120px;
+  font-size: 48px;
+}
+
+.header-name{
+  -webkit-text-stroke: 1px;
+  padding: 15px;
+  border: 3px solid white;
+}
+
+.header-profession{
+  -webkit-text-stroke: 1px;
+  padding: 10px;
+  border: 3px solid white;
+  margin-bottom: 20px;
+}
+
+.middle-container{
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+img{
+  width: 127px;
+  height: 127px;
+  padding: 11px;
+}
+h1{
+  margin-bottom: 0;
 }
 
 p{
-  color: white;
-  
-}
-
-a{
-  color: white;
-}
-
-h1{
-  color: white;
-}
-
-h3{
-  color: white;
-}
-
-li{
-  color: white;
-}
-
-table{
-  color: white;
-}
-
-hr{
-  border-color: white;
-  border-style: dotted none none;
-  border-width: 8px;
-  height: 2px;
-  width: 8%;
-}
-
-/* .profile-picture{
-
-} */
-
-/* Contact-Me */
-
-label{
-  color: white;
+  margin-top: 5px;
 }
