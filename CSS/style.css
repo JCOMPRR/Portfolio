@@ -62,42 +62,5 @@ h1{
 }
 
 p{
-<<<<<<< HEAD
   margin-top: 5px;
-=======
-  color: white;
-  
-}
-
-a{
-  color: white;
-}
-
-h1{
-  color: white;
-}
-
-h3{
-  color: white;
-}
-
-li{
-  color: white;
-}
-
-table{
-  color: white;
-}
-
-hr{
-  border-color: white;
-  border-style: dotted none none;
-  border-width: 8px;
-  height: 2px;
-  width: 8%;
-}
-
-label{
-  color: white;
->>>>>>> 53e732eff5c1c048c97454ef713b0869f117dc35
 }
