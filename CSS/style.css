@@ -3,6 +3,20 @@ body {
   margin: 0;
 }
 
+.hobbies-button{
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-button{
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -14,7 +28,7 @@ h1 {
 }
 
 header {
-  background-color: #1f282d;
+  background-color: rgb(31, 31, 31);
   text-align: center;
   font-size: 20px;
   width: 100%;
@@ -29,8 +43,8 @@ header {
 header ul {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 60%;
+  /* justify-content: flex-end; */
+  width: 30%;
   padding-right: 50px;
   list-style: none;
 }
@@ -40,32 +54,40 @@ header ul li a {
   padding: 10px 15px;
   margin: 0 6px;
   color: white;
-
 }
-
 
 .top-container {
   background-color: #1f282d;
   color: white;
   text-align: center;
-  padding: 10px;
-  padding-bottom: 85px;
+  padding: 90px;
+  padding-bottom: 90px;
   font-size: 38px;
 }
 
+/* Para centrar el FrontEnd (Borde) necesito un margin-left de 450px, pero donde? */
 .header-profession {
   font-size: 35px;
   padding: 10px;
   margin-top: 8px;
   margin-bottom: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 450px;
 }
 
 .skills-container {
   color: white;
   text-align: center;
   padding: 0;
-  margin-top: 25px;
+  margin-top: 0;
   margin-bottom: 15px;
+  position: relative;
+  background-color:  #121212;
+}
+
+.h2-skills{
+  margin: 0;
 }
 
 img {
@@ -80,4 +102,10 @@ img {
   padding-top: 30px;
   margin-top: 25px;
   margin-bottom: 15px;
+}
+
+/* "ABOUT ME" SECTION */
+
+p{
+  color: white;
 }
