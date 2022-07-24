@@ -1,0 +1,110 @@
+body {
+  background-color: #121212;
+  margin: 0;
+}
+
+/* .container {
+  width: 100%;
+  height: 100%;
+    position: relative;
+} */
+
+.hobbies-button{
+  /* border: 2px solid white;
+  border-radius: 20px; */
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.contact-button{
+  /* border: 1.5px solid white;
+  border-radius: 20px; */
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+
+header {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: right;
+  position: fixed;
+  font-family: 'Roboto Mono', monospace;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+  padding-right: 50px;
+  list-style: none;
+}
+
+header ul li a {
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 0 6px;
+  color: white;
+}
+
+.top-container {
+  /* position:static; */
+  background-color: #1f282d;
+}
+
+.name-container{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* FrontEnd Text */
+.header-profession {
+  font-size: 35px;
+  padding: 10px;
+  border: 1.5px solid white;
+  border-radius: 20px;
+  width: 70%;
+}
+
+.skills-container {
+  color: white;
+  font-size: 23px;
+  align-items: center;
+  padding: 0;
+  margin-top: 0 auto;
+  margin-bottom: 15px auto;
+  background-color:  #121212;
+}
+
+
+img {
+  width: 127px;
+  height: 127px;
+  padding: 11px;
+}
+
+.work-container {
+  color: white;
+  padding-top: 30px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* "ABOUT ME" SECTION
+Hacer que el header me lleve
+a la seccion de about me
+sin abrir pestañas nuevas
+(Todo en una pagina?)*/
+

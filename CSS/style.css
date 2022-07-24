@@ -1,16 +1,16 @@
 body {
   background-color: #121212;
-  margin: 0;
-  text-align: center;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.container {
+/* .container {
   width: 100%;
   height: 100%;
-  position: relative;
-}
+    position: relative;
+} */
 
-.hobbies-button{
+.hobbies-button {
   /* border: 2px solid white;
   border-radius: 20px; */
   font-weight: bold;
@@ -18,7 +18,7 @@ body {
   text-decoration: none;
 }
 
-.contact-button{
+.contact-button {
   /* border: 1.5px solid white;
   border-radius: 20px; */
   font-weight: bold;
@@ -26,19 +26,14 @@ body {
   text-decoration: none;
 }
 
-h1 {
-  margin: 0;
-}
-
-
 header {
-  text-align: center;
+  background-color: #1F1F1F;
+  padding: 1em 0;
   width: 100%;
-  height: 50px;
-  display: flex;
-  /* align-items: center; */
+  height: 60px;
+  display: block;
   justify-content: right;
-  position: fixed;
+  position: static;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -46,7 +41,6 @@ header ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 30%;
   padding-right: 50px;
   list-style: none;
 }
@@ -59,45 +53,81 @@ header ul li a {
 }
 
 .top-container {
-  background-color: #1f282d;
+  /* background-color: red; */
+  margin-right: auto;
+  margin-left: auto;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  height: auto;
+  width: auto;
+}
+
+.name-container {
+  background-color: #1E1E1E;
   color: white;
-  padding: 480px;
-  padding-bottom: 300px;
+  text-align: center;
   font-size: 40px;
   font-family: 'Roboto Mono', monospace;
+  position: static;
+  height: 75%;
+  width: 85%;
+  /* 50% - (h / 2) = 50% - h =  top*/
+  top: 30%;
+  /* 50% - (w / 2) = 50% - h =  top*/
+  left: 7.5%;
+  margin: 0 auto;
+  padding-top: 0;
+  padding: 5.2em 0;
+  /* padding-bottom: 29%; */
+  /* bottom: 100px; */
+  /* top: 200px;
+  left: 200px; */
 }
 
 /* FrontEnd Text */
 .header-profession {
   font-size: 35px;
   padding: 10px;
-  border: 1.5px solid white;
+  /* border: 1.5px solid white; */
   border-radius: 20px;
-  width: 450px;
+  width: 70%;
+}
+
+.programming-h2 {
+  text-align: center;
+  color: white;
+  font-size: 23px;
 }
 
 .skills-container {
-  color: white;
-  font-size: 23px;
-  align-items: center;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 15px;
-  background-color:  #121212;
+  background-color: #1E1E1E;
+  /* position: absolute; */
+  height: 60%;
+  width: 85%;
+  /* top: calc(50% - 30%);
+  left: calc(50% - 42.5%); */
+  margin: 0 auto;
 }
-
 
 img {
   width: 127px;
   height: 127px;
-  padding: 11px;
+  padding-left: 50px;
+  
+
 }
 
 .work-container {
+  background-color: #1E1E1E;
+  text-align: center;
   color: white;
-  padding-top: 30px;
-  margin-top: 25px;
-  margin-bottom: 15px;
+  margin: 0 auto;
+  /* margin-bottom: 15px;
+  height: 75%;
+  width: 100%;
+  top: 30%;
+  left: 7.5%; */
+
 }
 
 /* "ABOUT ME" SECTION
@@ -105,4 +135,3 @@ Hacer que el header me lleve
 a la seccion de about me
 sin abrir pestañas nuevas
 (Todo en una pagina?)*/
-
