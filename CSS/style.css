@@ -44,28 +44,26 @@ header ul li a {
   color: #d7d7d7;
 }
 
-.top-container {
-  margin-right: auto;
-  margin-left: auto;
-  height: auto;
-  width: auto;
-}
-
 .name-container {
   background-color: #1E1E1E;
   color: #d7d7d7;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
   font-size: 40px;
-  font-family: 'Roboto Mono', monospace;
-  position: static;
-  height: 75%;
+  /* position: static; */
+  height: 658px;
   width: 85%;
-  /* 50% - (h / 2) = 50% - h =  top*/
-  top: 30%;
-  /* 50% - (w / 2) = 50% - h =  top*/
-  left: 7.5%;
   margin: 0 auto;
-  padding-bottom: 37%;
+  margin-top: 54px;
+}
+
+.h1-name{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.p-name{
+  margin: 0;
 }
 
 /* FrontEnd Text */
@@ -84,11 +82,11 @@ header ul li a {
 
 .skills-container {
   background-color: #1E1E1E;
-  position: absolute;
-  height: 30%; /*Por si acaso poner otra vez al 60% */
+  /* position: absolute; */
+  height: 658px;
   width: 85%;
   margin: 0 auto;
-  top: 980px;
+  margin-top: 54px;
   left: 110px;
 }
 
@@ -101,11 +99,14 @@ img {
 }
 
 .work-container {
+  background-color: #1E1E1E;
   text-align: center;
   color: #d7d7d7;
   margin: 0 auto;
-  position: absolute;
-
+  margin-top: 54px;
+  height: 658px;
+  width: 84.9%;
+  left: 110px;
 }
 
 /* "ABOUT ME" SECTION
