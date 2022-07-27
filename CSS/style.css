@@ -5,17 +5,32 @@ body {
 }
 
 .hobbies-button {
-  /* border: 2px solid white;
-  border-radius: 20px; */
+  color: white;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 100%;
   text-decoration: none;
+  transition: 0.6s;
 }
 
+
 .contact-button {
+  color: white;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 100%;
   text-decoration: none;
+  transition: 0.6s;
+}
+
+.hobbies-button:hover{
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+}
+
+.contact-button:hover{
+  background-color: white;
+  border-radius: 15px;
+  color: black;
 }
 
 header {
@@ -51,7 +66,7 @@ header ul li a {
   text-align: center;
   font-size: 40px;
   /* position: static; */
-  height: 658px;
+  height: 663px;
   width: 85%;
   margin: 0 auto;
   margin-top: 54px;
@@ -60,14 +75,17 @@ header ul li a {
 .h1-name{
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 180px;
 }
 
 .p-name{
   margin: 0;
+  
 }
 
 /* FrontEnd Text */
 .header-profession {
+  /* background-color: #1E1E1E; */
   font-size: 35px;
   padding: 10px;
   border-radius: 20px;
